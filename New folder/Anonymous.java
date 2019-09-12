@@ -2,9 +2,9 @@ import java.awt.event.*;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 
-public class Anonymous extends JPanel{
+public class Anonymous2 extends JPanel{
 
-	public Anonymous(){
+	public Anonymous2(){
 
 		JFrame frame = new JFrame();
 		frame.add(this);
@@ -18,7 +18,7 @@ public class Anonymous extends JPanel{
 
 	public static void main(String[]args){
 
-		Anonymous demo = new Anonymous();
+		Anonymous2 demo = new Anonymous2();
 
 	}
 
