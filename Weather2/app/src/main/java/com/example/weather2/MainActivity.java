@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -35,21 +36,28 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView tempTextView;
+
     URL url;
     URLConnection connection;
     InputStream stream;
     BufferedReader bufferedReader;
+    String zipCode;
     String info = "";
     JSONObject jsonObject;
     ListView listView;
-    ArrayList<String> list;
+    EditText editText;
+    ArrayList<Day> list;
 
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("TAG", "TEST");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.listView);
+        editText = findViewById(R.id.editText);
+        zipCode = editText.getText().toString();
+
+
 
         (new AsyncThread()).execute();
     }
